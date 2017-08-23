@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<title><a id="user-content-loading-and-preprocessing-the-data" class="anchor" href="#loading-and-preprocessing-the-data" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loading and preprocessing the data</title>
+<title>Loading and preprocessing the data</title>
 
 <script type="text/javascript">
 window.onload = function() {
@@ -17,7 +17,45 @@ window.onload = function() {
 };
 </script>
 
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
 
+   pre .literal {
+     color: #990073
+   }
+
+   pre .number {
+     color: #099;
+   }
+
+   pre .comment {
+     color: #998;
+     font-style: italic
+   }
+
+   pre .keyword {
+     color: #900;
+     font-weight: bold
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: #d14;
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
 
 
 
@@ -163,744 +201,99 @@ hr {
 </head>
 
 <body>
-<p>&lt;!DOCTYPE html&gt;
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-  <link rel="dns-prefetch" href="https://assets-cdn.github.com">
-  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
-  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/"></p>
+<h2>Loading and preprocessing the data</h2>
 
-<p><link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-77c3b874f32e71b14cded5a120f42f5c7288fa52e0a37f2d5919fbd8bcfca63c.css" integrity="sha256-d8O4dPMucbFM3tWhIPQvXHKI+lLgo38tWRn72Lz8pjw=" media="all" rel="stylesheet" />
-  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-cc7a4e0393fcfd39ca34ef16ad34385585bc79c553e0b4f317dcd2bb2493db8e.css" integrity="sha256-zHpOA5P8/TnKNO8WrTQ4VYW8ecVT4LTzF9zSuyST244=" media="all" rel="stylesheet" /></p>
-
-<p><meta name="viewport" content="width=device-width"></p>
-
-<p><title>RepData_PeerAssessment1/PA1_template.Rmd at master · Kitty612/RepData_PeerAssessment1</title>
-  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
-  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
-  <meta property="fb:app_id" content="1401488693436528"></p>
-
-<pre><code>&lt;meta content=&quot;https://avatars0.githubusercontent.com/u/8844283?v=4&amp;amp;s=400&quot; property=&quot;og:image&quot; /&gt;&lt;meta content=&quot;GitHub&quot; property=&quot;og:site_name&quot; /&gt;&lt;meta content=&quot;object&quot; property=&quot;og:type&quot; /&gt;&lt;meta content=&quot;Kitty612/RepData_PeerAssessment1&quot; property=&quot;og:title&quot; /&gt;&lt;meta content=&quot;https://github.com/Kitty612/RepData_PeerAssessment1&quot; property=&quot;og:url&quot; /&gt;&lt;meta content=&quot;RepData_PeerAssessment1 - Peer Assessment 1 for Reproducible Research&quot; property=&quot;og:description&quot; /&gt;
+<pre><code class="r">data &lt;- read.csv(&quot;activity.csv&quot;)
 </code></pre>
 
-<p><link rel="assets" href="https://assets-cdn.github.com/">
-  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MTk5NzEwNTEyOmYyOGYxZDEwYjhiZWJhNTc4NTFjZjcxNDQyN2EyMWRiNDAzODExNjU2ZGFmZDQ5M2M2YzZmZjY3YWI5NmNiYmI=--b331b634d69c5669fbea4255cb04628642b7d7de">
-  <meta name="pjax-timeout" content="1000">
-  <link rel="sudo-modal" href="/sessions/sudo_modal">
-  <meta name="request-id" content="F8E8:19EB2:4A158:71F16:599D1900" data-pjax-transient></p>
-
-<p><meta name="selected-link" value="repo_source" data-pjax-transient></p>
-
-<p><meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
-<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
-    <meta name="google-analytics" content="UA-3769691-2"></p>
-
-<p><meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="https://collector.githubapp.com/github-external/browser_event" name="octolytics-event-url" /><meta content="F8E8:19EB2:4A158:71F16:599D1900" name="octolytics-dimension-request_id" /><meta content="sea" name="octolytics-dimension-region_edge" /><meta content="iad" name="octolytics-dimension-region_render" /><meta content="8844283" name="octolytics-actor-id" /><meta content="Kitty612" name="octolytics-actor-login" /><meta content="0143d686054ef3351e91efacdf1d8f7c002a84fea789c1d94802d699f3cb00a5" name="octolytics-actor-hash" />
-<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" name="analytics-location" /></p>
-
-<p><meta class="js-ga-set" name="dimension1" content="Logged In"></p>
-
-<pre><code>  &lt;meta name=&quot;hostname&quot; content=&quot;github.com&quot;&gt;
+<pre><code>## Warning in file(file, &quot;rt&quot;): cannot open file &#39;activity.csv&#39;: No such file
+## or directory
 </code></pre>
 
-<p><meta name="user-login" content="Kitty612"></p>
-
-<pre><code>  &lt;meta name=&quot;expected-hostname&quot; content=&quot;github.com&quot;&gt;
-&lt;meta name=&quot;js-proxy-site-detection-payload&quot; content=&quot;OGNmNDJkYTg5ZWFjZDE5OWIwNmFlODA5NGFmNjEzNmMyM2Y1ZmRmOTQ0YjFjNGZiYTdkYzI4NDIwMmUyZTMyMnx7InJlbW90ZV9hZGRyZXNzIjoiNzMuMTY5LjE0OC4xMzEiLCJyZXF1ZXN0X2lkIjoiRjhFODoxOUVCMjo0QTE1ODo3MUYxNjo1OTlEMTkwMCIsInRpbWVzdGFtcCI6MTUwMzQ2Nzc4NCwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==&quot;&gt;
-
-&lt;meta name=&quot;enabled-features&quot; content=&quot;UNIVERSE_BANNER&quot;&gt;
+<pre><code>## Error in file(file, &quot;rt&quot;): cannot open the connection
 </code></pre>
 
-<p><meta name="html-safe-nonce" content="8454cebba025953c5017b8db313994eb0088f615"></p>
-
-<p><meta http-equiv="x-pjax-version" content="ef934ebfdeaf4fc7bd6c3e89e7762062"></p>
-
-<pre><code>  &lt;link href=&quot;https://github.com/Kitty612/RepData_PeerAssessment1/commits/master.atom&quot; rel=&quot;alternate&quot; title=&quot;Recent Commits to RepData_PeerAssessment1:master&quot; type=&quot;application/atom+xml&quot;&gt;
+<pre><code class="r">head(data)
 </code></pre>
 
-<p><meta name="description" content="RepData_PeerAssessment1 - Peer Assessment 1 for Reproducible Research">
-  <meta name="go-import" content="github.com/Kitty612/RepData_PeerAssessment1 git https://github.com/Kitty612/RepData_PeerAssessment1.git"></p>
-
-<p><meta content="8844283" name="octolytics-dimension-user_id" /><meta content="Kitty612" name="octolytics-dimension-user_login" /><meta content="100321278" name="octolytics-dimension-repository_id" /><meta content="Kitty612/RepData_PeerAssessment1" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="true" name="octolytics-dimension-repository_is_fork" /><meta content="16709733" name="octolytics-dimension-repository_parent_id" /><meta content="rdpeng/RepData_PeerAssessment1" name="octolytics-dimension-repository_parent_nwo" /><meta content="16709733" name="octolytics-dimension-repository_network_root_id" /><meta content="rdpeng/RepData_PeerAssessment1" name="octolytics-dimension-repository_network_root_nwo" /><meta content="true" name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" /></p>
-
-<pre><code>&lt;link rel=&quot;canonical&quot; href=&quot;https://github.com/Kitty612/RepData_PeerAssessment1/blob/master/PA1_template.Rmd&quot; data-pjax-transient&gt;
+<pre><code>##   steps       date interval
+## 1    NA 2012-10-01        0
+## 2    NA 2012-10-01        5
+## 3    NA 2012-10-01       10
+## 4    NA 2012-10-01       15
+## 5    NA 2012-10-01       20
+## 6    NA 2012-10-01       25
 </code></pre>
 
-<p><meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats"></p>
-
-<p><meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors"></p>
-
-<p><link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
-  <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico"></p>
-
-<p><meta name="theme-color" content="#1e2327"></p>
-
-<p></head></p>
-
-<p><body class="logged-in env-production emoji-size-boost page-blob"></p>
-
-<p><div class="position-relative js-header-wrapper ">
-    <a href="#start-of-content" tabindex="1" class="bg-black text-white p-3 show-on-focus js-skip-to-content">Skip to content</a>
-    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div></p>
-
-<p><header class="Header  f5" role="banner">
-  <div class="d-flex px-3 flex-justify-between container-lg">
-    <div class="d-flex flex-justify-between">
-      <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
-  <svg aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-</a></p>
-
-<pre><code>&lt;/div&gt;
-
-&lt;div class=&quot;HeaderMenu d-flex flex-justify-between flex-auto&quot;&gt;
-  &lt;div class=&quot;d-flex&quot;&gt;
-        &lt;div class=&quot;&quot;&gt;
-          &lt;div class=&quot;header-search scoped-search site-scoped-search js-site-search&quot; role=&quot;search&quot;&gt;
-</code></pre>
-
-<p>&lt;!&ndash; &#39;&ldquo; &ndash;&gt;&lt;!&ndash; </textarea></xmp> &ndash;&gt;</option></form><form accept-charset="UTF-8" action="/Kitty612/RepData_PeerAssessment1/search" class="js-site-search-form" data-scoped-search-url="/Kitty612/RepData_PeerAssessment1/search" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
-    <label class="form-control header-search-wrapper js-chromeless-input-container">
-        <a href="/Kitty612/RepData_PeerAssessment1/blob/master/PA1_template.Rmd" class="header-search-scope no-underline">This repository</a>
-      <input type="text"
-        class="form-control header-search-input js-site-search-focus js-site-search-field is-clearable"
-        data-hotkey="s"
-        name="q"
-        value=""
-        placeholder="Search"
-        aria-label="Search this repository"
-        data-unscoped-placeholder="Search GitHub"
-        data-scoped-placeholder="Search"
-        autocapitalize="off">
-        <input type="hidden" class="js-site-search-type-field" name="type" >
-    </label>
-</form></div></p>
-
-<pre><code>        &lt;/div&gt;
-
-      &lt;ul class=&quot;d-flex pl-2 flex-items-center text-bold list-style-none&quot; role=&quot;navigation&quot;&gt;
-        &lt;li&gt;
-          &lt;a href=&quot;/pulls&quot; aria-label=&quot;Pull requests you created&quot; class=&quot;js-selected-navigation-item HeaderNavlink px-2&quot; data-ga-click=&quot;Header, click, Nav menu - item:pulls context:user&quot; data-hotkey=&quot;g p&quot; data-selected-links=&quot;/pulls /pulls/assigned /pulls/mentioned /pulls&quot;&gt;
-            Pull requests
-</code></pre>
-
-<p></a>            </li>
-            <li>
-              <a href="/issues" aria-label="Issues you created" class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
-                Issues
-</a>            </li>
-                <li>
-                  <a href="/marketplace" class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:marketplace context:user" data-selected-links=" /marketplace">
-                    Marketplace
-</a>                </li>
-            <li>
-              <a href="/explore" class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship showcases showcases_search showcases_landing /explore">
-                Explore
-</a>            </li>
-          </ul>
-      </div></p>
-
-<pre><code>  &lt;div class=&quot;d-flex&quot;&gt;
-</code></pre>
-
-<ul class="user-nav d-flex flex-items-center list-style-none" id="user-links">
-  <li class="dropdown js-menu-container">
-    <span class="">
-      
-      <a href="/notifications" aria-label="You have no unread notifications" class="notification-indicator tooltipped tooltipped-s px-2  js-socket-channel js-notification-indicator" data-channel="notification-changed:8844283" data-ga-click="Header, go to notifications, icon:read" data-hotkey="g n">
-          <span class="mail-status "></span>
-          <svg aria-hidden="true" class="octicon octicon-bell" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 12v1H0v-1l.73-.58c.77-.77.81-2.55 1.19-4.42C2.69 3.23 6 2 6 2c0-.55.45-1 1-1s1 .45 1 1c0 0 3.39 1.23 4.16 5 .38 1.88.42 3.66 1.19 4.42l.66.58H14zm-7 4c1.11 0 2-.89 2-2H5c0 1.11.89 2 2 2z"/></svg>
-</a>
-    </span>
-  </li>
-
-  <li class="dropdown js-menu-container">
-    <a class="HeaderNavlink tooltipped tooltipped-s js-menu-target d-flex px-2 flex-items-center" href="/new"
-       aria-label="Create new…"
-       aria-expanded="false"
-       aria-haspopup="true"
-       data-ga-click="Header, create new, icon:add">
-      <svg aria-hidden="true" class="octicon octicon-plus float-left" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5z"/></svg>
-      <span class="dropdown-caret mt-1"></span>
-    </a>
-
-    <div class="dropdown-menu-content js-menu-content">
-      <ul class="dropdown-menu dropdown-menu-sw">
-        
-<a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
-  New repository
-</a>
-
-  <a class="dropdown-item" href="/new/import" data-ga-click="Header, import a repository">
-    Import repository
-  </a>
-
-<a class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, create new gist">
-  New gist
-</a>
-
-  <a class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
-    New organization
-  </a>
-
-
-
-
-      </ul>
-    </div>
-  </li>
-
-  <li class="dropdown js-menu-container">
-
-    <a class="HeaderNavlink name tooltipped tooltipped-sw js-menu-target d-flex pl-2 flex-items-center" href="/Kitty612"
-       aria-label="View profile and more"
-       aria-expanded="false"
-       aria-haspopup="true"
-       data-ga-click="Header, show menu, icon:avatar">
-      <img alt="@Kitty612" class="avatar" src="https://avatars3.githubusercontent.com/u/8844283?v=4&amp;s=40" height="20" width="20">
-      <span class="dropdown-caret mt-1"></span>
-    </a>
-
-    <div class="dropdown-menu-content js-menu-content">
-      <div class="dropdown-menu dropdown-menu-sw">
-        <div class="dropdown-header header-nav-current-user css-truncate">
-          Signed in as <strong class="css-truncate-target">Kitty612</strong>
-        </div>
-
-        <div class="dropdown-divider"></div>
-
-        <a class="dropdown-item" href="/Kitty612" data-ga-click="Header, go to profile, text:your profile">
-          Your profile
-        </a>
-        <a class="dropdown-item" href="/Kitty612?tab=stars" data-ga-click="Header, go to starred repos, text:your stars">
-          Your stars
-        </a>
-          <a class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, your gists, text:your gists">Your Gists</a>
-
-        <div class="dropdown-divider"></div>
-
-        <a class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">
-          Help
-        </a>
-
-        <a class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">
-          Settings
-        </a>
-
-        <!-- '"` --><!-- </textarea></xmp> &ndash;></option></form><form accept-charset="UTF-8" action="/logout" class="logout-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="uSIyHch3UuJvUAMrDoo/PAOJTOhNso00SzMX0uPxC5zVtRmTca3Wx5l4vTnJ1bIeRCEIeN47e9i+nRbxLi7Ucw==" /></div>
-          <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
-            Sign out
-          </button>
-</form>      </div>
-    </div>
-  </li>
-</ul>
-
-<pre><code>    &lt;!-- &#39;&quot;` --&gt;&lt;!-- &lt;/textarea&gt;&lt;/xmp&gt; --&gt;&lt;/option&gt;&lt;/form&gt;&lt;form accept-charset=&quot;UTF-8&quot; action=&quot;/logout&quot; class=&quot;sr-only right-0&quot; method=&quot;post&quot;&gt;&lt;div style=&quot;margin:0;padding:0;display:inline&quot;&gt;&lt;input name=&quot;utf8&quot; type=&quot;hidden&quot; value=&quot;&amp;#x2713;&quot; /&gt;&lt;input name=&quot;authenticity_token&quot; type=&quot;hidden&quot; value=&quot;YT1AbuHDurKzsjsj6Cc1Nr9Nawtl8MlmuX9qIZatlfkNqmvgWBk+l0WahTEveLgU+OUvm/Z5P4pM0WsCW3JKFg==&quot; /&gt;&lt;/div&gt;
-      &lt;button type=&quot;submit&quot; class=&quot;dropdown-item dropdown-signout&quot; data-ga-click=&quot;Header, sign out, icon:logout&quot;&gt;
-        Sign out
-      &lt;/button&gt;
-</code></pre>
-
-<p></form>      </div>
-    </div>
-  </div>
-</header></p>
-
-<p></div></p>
-
-<p><div id="start-of-content" class="show-on-focus"></div></p>
-
-<pre><code>&lt;div id=&quot;js-flash-container&quot;&gt;
-</code></pre>
-
-<p></div></p>
-
-<p><div role="main">
-        <div itemscope itemtype="http://schema.org/SoftwareSourceCode">
-    <div id="js-repo-pjax-container" data-pjax-container></p>
-
-<pre><code>&lt;div class=&quot;pagehead repohead instapaper_ignore readability-menu experiment-repo-nav&quot;&gt;
-  &lt;div class=&quot;container repohead-details-container&quot;&gt;
-
-    &lt;ul class=&quot;pagehead-actions&quot;&gt;
-</code></pre>
-
-<p><li>
-        &lt;!&ndash; &#39;&rdquo; &ndash;&gt;&lt;!&ndash; </textarea></xmp> &ndash;&gt;</option></form><form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="EtYEwQPfaAtdloDMyqzO+xYXEXAP4zZEkTh+1KQUFzmD//TQtOuyq/jv08mVNIn5BlGn18SCyCOXE3ALgl2KYQ==" /></div>      <input class="form-control" id="repository_id" name="repository_id" type="hidden" value="100321278" /></p>
-
-<pre><code>    &lt;div class=&quot;select-menu js-menu-container js-select-menu&quot;&gt;
-      &lt;a href=&quot;/Kitty612/RepData_PeerAssessment1/subscription&quot;
-        class=&quot;btn btn-sm btn-with-count select-menu-button js-menu-target&quot;
-        role=&quot;button&quot;
-        aria-haspopup=&quot;true&quot;
-        aria-expanded=&quot;false&quot;
-        aria-label=&quot;Toggle repository notifications menu&quot;
-        data-ga-click=&quot;Repository, click Watch settings, action:blob#show&quot;&gt;
-        &lt;span class=&quot;js-select-button&quot;&gt;
-            &lt;svg aria-hidden=&quot;true&quot; class=&quot;octicon octicon-eye&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z&quot;/&gt;&lt;/svg&gt;
-            Unwatch
-        &lt;/span&gt;
-      &lt;/a&gt;
-        &lt;a class=&quot;social-count js-social-count&quot;
-          href=&quot;/Kitty612/RepData_PeerAssessment1/watchers&quot;
-          aria-label=&quot;1 user is watching this repository&quot;&gt;
-          1
-        &lt;/a&gt;
-
-    &lt;div class=&quot;select-menu-modal-holder&quot;&gt;
-      &lt;div class=&quot;select-menu-modal subscription-menu-modal js-menu-content&quot;&gt;
-        &lt;div class=&quot;select-menu-header js-navigation-enable&quot; tabindex=&quot;-1&quot;&gt;
-          &lt;svg aria-label=&quot;Close&quot; class=&quot;octicon octicon-x js-menu-close&quot; height=&quot;16&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 12 16&quot; width=&quot;12&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z&quot;/&gt;&lt;/svg&gt;
-          &lt;span class=&quot;select-menu-title&quot;&gt;Notifications&lt;/span&gt;
-        &lt;/div&gt;
-
-          &lt;div class=&quot;select-menu-list js-navigation-container&quot; role=&quot;menu&quot;&gt;
-
-            &lt;div class=&quot;select-menu-item js-navigation-item &quot; role=&quot;menuitem&quot; tabindex=&quot;0&quot;&gt;
-              &lt;svg aria-hidden=&quot;true&quot; class=&quot;octicon octicon-check select-menu-item-icon&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 12 16&quot; width=&quot;12&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z&quot;/&gt;&lt;/svg&gt;
-              &lt;div class=&quot;select-menu-item-text&quot;&gt;
-                &lt;input id=&quot;do_included&quot; name=&quot;do&quot; type=&quot;radio&quot; value=&quot;included&quot; /&gt;
-                &lt;span class=&quot;select-menu-item-heading&quot;&gt;Not watching&lt;/span&gt;
-                &lt;span class=&quot;description&quot;&gt;Be notified when participating or @mentioned.&lt;/span&gt;
-                &lt;span class=&quot;js-select-button-text hidden-select-button-text&quot;&gt;
-                  &lt;svg aria-hidden=&quot;true&quot; class=&quot;octicon octicon-eye&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z&quot;/&gt;&lt;/svg&gt;
-                  Watch
-                &lt;/span&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;select-menu-item js-navigation-item selected&quot; role=&quot;menuitem&quot; tabindex=&quot;0&quot;&gt;
-              &lt;svg aria-hidden=&quot;true&quot; class=&quot;octicon octicon-check select-menu-item-icon&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 12 16&quot; width=&quot;12&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z&quot;/&gt;&lt;/svg&gt;
-              &lt;div class=&quot;select-menu-item-text&quot;&gt;
-                &lt;input checked=&quot;checked&quot; id=&quot;do_subscribed&quot; name=&quot;do&quot; type=&quot;radio&quot; value=&quot;subscribed&quot; /&gt;
-                &lt;span class=&quot;select-menu-item-heading&quot;&gt;Watching&lt;/span&gt;
-                &lt;span class=&quot;description&quot;&gt;Be notified of all conversations.&lt;/span&gt;
-                &lt;span class=&quot;js-select-button-text hidden-select-button-text&quot;&gt;
-                  &lt;svg aria-hidden=&quot;true&quot; class=&quot;octicon octicon-eye&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z&quot;/&gt;&lt;/svg&gt;
-                    Unwatch
-                &lt;/span&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;select-menu-item js-navigation-item &quot; role=&quot;menuitem&quot; tabindex=&quot;0&quot;&gt;
-              &lt;svg aria-hidden=&quot;true&quot; class=&quot;octicon octicon-check select-menu-item-icon&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 12 16&quot; width=&quot;12&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z&quot;/&gt;&lt;/svg&gt;
-              &lt;div class=&quot;select-menu-item-text&quot;&gt;
-                &lt;input id=&quot;do_ignore&quot; name=&quot;do&quot; type=&quot;radio&quot; value=&quot;ignore&quot; /&gt;
-                &lt;span class=&quot;select-menu-item-heading&quot;&gt;Ignoring&lt;/span&gt;
-                &lt;span class=&quot;description&quot;&gt;Never be notified.&lt;/span&gt;
-                &lt;span class=&quot;js-select-button-text hidden-select-button-text&quot;&gt;
-                  &lt;svg aria-hidden=&quot;true&quot; class=&quot;octicon octicon-mute&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M8 2.81v10.38c0 .67-.81 1-1.28.53L3 10H1c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h2l3.72-3.72C7.19 1.81 8 2.14 8 2.81zm7.53 3.22l-1.06-1.06-1.97 1.97-1.97-1.97-1.06 1.06L11.44 8 9.47 9.97l1.06 1.06 1.97-1.97 1.97 1.97 1.06-1.06L13.56 8l1.97-1.97z&quot;/&gt;&lt;/svg&gt;
-                    Stop ignoring
-                &lt;/span&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-
-          &lt;/div&gt;
-
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-</code></pre>
-
-<p></form>
-  </li></p>
-
-<p><li></p>
-
-<p><div class="js-toggler-container js-social-container starring-container ">
-    &lt;!&ndash; &#39;&ldquo;<code>--&gt;&lt;!-- &lt;/textarea&gt;&lt;/xmp&gt; --&gt;&lt;/option&gt;&lt;/form&gt;&lt;form accept-charset=&quot;UTF-8&quot; action=&quot;/Kitty612/RepData_PeerAssessment1/unstar&quot; class=&quot;starred&quot; data-remote=&quot;true&quot; method=&quot;post&quot;&gt;&lt;div style=&quot;margin:0;padding:0;display:inline&quot;&gt;&lt;input name=&quot;utf8&quot; type=&quot;hidden&quot; value=&quot;&amp;#x2713;&quot; /&gt;&lt;input name=&quot;authenticity_token&quot; type=&quot;hidden&quot; value=&quot;G6+Dz4ckr5nv2SRM6CJjH19CsE8OLqi/wwJ5URLs2pMvo9Wqm0QSwcmR1Wjtp0K33vIC+JMJne+DCiCsGlDHfA==&quot; /&gt;&lt;/div&gt;
-      &lt;button
-        type=&quot;submit&quot;
-        class=&quot;btn btn-sm btn-with-count js-toggler-target&quot;
-        aria-label=&quot;Unstar this repository&quot; title=&quot;Unstar Kitty612/RepData_PeerAssessment1&quot;
-        data-ga-click=&quot;Repository, click unstar button, action:blob#show; text:Unstar&quot;&gt;
-        &lt;svg aria-hidden=&quot;true&quot; class=&quot;octicon octicon-star&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;14&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z&quot;/&gt;&lt;/svg&gt;
-        Unstar
-      &lt;/button&gt;
-        &lt;a class=&quot;social-count js-social-count&quot; href=&quot;/Kitty612/RepData_PeerAssessment1/stargazers&quot;
-           aria-label=&quot;0 users starred this repository&quot;&gt;
-          0
-        &lt;/a&gt;
-&lt;/form&gt;
-    &lt;!-- &#39;&quot;</code> &ndash;&gt;&lt;!&ndash; </textarea></xmp> &ndash;&gt;</option></form><form accept-charset="UTF-8" action="/Kitty612/RepData_PeerAssessment1/star" class="unstarred" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="JU/45Lv33Fm5IM8qGps66arn2qotLhs61vvrPtrnU1LVmp+gYq+CUynFvm+Hy9M5cUdPH6Xk7ESSg+kleLQ5aA==" /></div>
-      <button
-        type="submit"
-        class="btn btn-sm btn-with-count js-toggler-target"
-        aria-label="Star this repository" title="Star Kitty612/RepData_PeerAssessment1"
-        data-ga-click="Repository, click star button, action:blob#show; text:Star">
-        <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>
-        Star
-      </button>
-        <a class="social-count js-social-count" href="/Kitty612/RepData_PeerAssessment1/stargazers"
-           aria-label="0 users starred this repository">
-          0
-        </a>
-</form>  </div></p>
-
-<p></li></p>
-
-<p><li>
-          &lt;!&ndash; &#39;&rdquo; &ndash;&gt;&lt;!&ndash; </textarea></xmp> &ndash;&gt;</option></form><form accept-charset="UTF-8" action="/Kitty612/RepData_PeerAssessment1/fork" class="btn-with-count" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="S9wSkIGNSfC6aIRvqVaXOmYO/Xmte6RBQEtz5LP+v6PA4EzUZkNVOKPMz2eOv2/y7GMIGd7p9TtUaFrIQjNlyg==" /></div>
-            <button
-                type="submit"
-                class="btn btn-sm btn-with-count"
-                data-ga-click="Repository, show fork modal, action:blob#show; text:Fork"
-                title="Fork your own copy of Kitty612/RepData_PeerAssessment1 to your account"
-                aria-label="Fork your own copy of Kitty612/RepData_PeerAssessment1 to your account">
-              <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
-              Fork
-            </button>
-</form>
-    <a href="/Kitty612/RepData_PeerAssessment1/network" class="social-count"
-       aria-label="28253 users forked this repository">
-      28,253
-    </a>
-  </li>
-</ul></p>
-
-<pre><code>    &lt;h1 class=&quot;public &quot;&gt;
-</code></pre>
-
-<p><svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
-  <span class="author" itemprop="author"><a href="/Kitty612" class="url fn" rel="author">Kitty612</a></span>&lt;!&ndash;
-&ndash;&gt;<span class="path-divider">/</span>&lt;!&ndash;
-&ndash;&gt;<strong itemprop="name"><a href="/Kitty612/RepData_PeerAssessment1" data-pjax="#js-repo-pjax-container">RepData_PeerAssessment1</a></strong></p>
-
-<pre><code>&lt;span class=&quot;fork-flag&quot;&gt;
-  &lt;span class=&quot;text&quot;&gt;forked from &lt;a href=&quot;/rdpeng/RepData_PeerAssessment1&quot;&gt;rdpeng/RepData_PeerAssessment1&lt;/a&gt;&lt;/span&gt;
-&lt;/span&gt;
-</code></pre>
-
-<p></h1></p>
-
-<pre><code>  &lt;/div&gt;
-  &lt;div class=&quot;container&quot;&gt;
-</code></pre>
-
-<p><nav class="reponav js-repo-nav js-sidenav-container-pjax"
-     itemscope
-     itemtype="http://schema.org/BreadcrumbList"
-     role="navigation"
-     data-pjax="#js-repo-pjax-container"></p>
-
-<p><span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
-    <a href="/Kitty612/RepData_PeerAssessment1" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /Kitty612/RepData_PeerAssessment1" itemprop="url">
-      <svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
-      <span itemprop="name">Code</span>
-      <meta itemprop="position" content="1">
-</a>  </span></p>
-
-<p><span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
-    <a href="/Kitty612/RepData_PeerAssessment1/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /Kitty612/RepData_PeerAssessment1/pulls" itemprop="url">
-      <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
-      <span itemprop="name">Pull requests</span>
-      <span class="Counter">0</span>
-      <meta itemprop="position" content="3">
-</a>  </span></p>
-
-<pre><code>&lt;a href=&quot;/Kitty612/RepData_PeerAssessment1/projects&quot; class=&quot;js-selected-navigation-item reponav-item&quot; data-selected-links=&quot;repo_projects new_repo_project repo_project /Kitty612/RepData_PeerAssessment1/projects&quot;&gt;
-  &lt;svg aria-hidden=&quot;true&quot; class=&quot;octicon octicon-project&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 15 16&quot; width=&quot;15&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z&quot;/&gt;&lt;/svg&gt;
-  Projects
-  &lt;span class=&quot;Counter&quot; &gt;0&lt;/span&gt;
-</code></pre>
-
-<p></a>
-    <a href="/Kitty612/RepData_PeerAssessment1/wiki" class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /Kitty612/RepData_PeerAssessment1/wiki">
-      <svg aria-hidden="true" class="octicon octicon-book" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"/></svg>
-      Wiki
-</a>
-      <a href="/Kitty612/RepData_PeerAssessment1/settings" class="js-selected-navigation-item reponav-item" data-selected-links="repo_settings repo_branch_settings hooks integration_installations /Kitty612/RepData_PeerAssessment1/settings">
-        <svg aria-hidden="true" class="octicon octicon-gear" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 8.77v-1.6l-1.94-.64-.45-1.09.88-1.84-1.13-1.13-1.81.91-1.09-.45-.69-1.92h-1.6l-.63 1.94-1.11.45-1.84-.88-1.13 1.13.91 1.81-.45 1.09L0 7.23v1.59l1.94.64.45 1.09-.88 1.84 1.13 1.13 1.81-.91 1.09.45.69 1.92h1.59l.63-1.94 1.11-.45 1.84.88 1.13-1.13-.92-1.81.47-1.09L14 8.75v.02zM7 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg>
-        Settings
-</a>
-    <div class="reponav-dropdown js-menu-container">
-      <button type="button" class="btn-link reponav-item reponav-dropdown js-menu-target " data-no-toggle aria-expanded="false" aria-haspopup="true">
-        Insights
-        <svg aria-hidden="true" class="octicon octicon-triangle-down v-align-middle text-gray" height="11" version="1.1" viewBox="0 0 12 16" width="8"><path fill-rule="evenodd" d="M0 5l6 6 6-6z"/></svg>
-      </button>
-      <div class="dropdown-menu-content js-menu-content">
-        <div class="dropdown-menu dropdown-menu-sw">
-          <a class="dropdown-item" href="/Kitty612/RepData_PeerAssessment1/pulse" data-skip-pjax>
-            <svg aria-hidden="true" class="octicon octicon-pulse" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M11.5 8L8.8 5.4 6.6 8.5 5.5 1.6 2.38 8H0v2h3.6l.9-1.8.9 5.4L9 8.5l1.6 1.5H14V8z"/></svg>
-            Pulse
-          </a>
-          <a class="dropdown-item" href="/Kitty612/RepData_PeerAssessment1/graphs" data-skip-pjax>
-            <svg aria-hidden="true" class="octicon octicon-graph" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg>
-            Graphs
-          </a>
-        </div>
-      </div>
-    </div>
-</nav></p>
-
-<pre><code>  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-
-<div class="container new-discussion-timeline experiment-repo-nav">
-  <div class="repository-content">
-
-    
-  <a href="/Kitty612/RepData_PeerAssessment1/blob/c8abbab40f99c201cd25125e1b36602c72955007/PA1_template.Rmd" class="d-none js-permalink-shortcut" data-hotkey="y">Permalink</a>
-
-  <!-- blob contrib key: blob_contributors:v21:f5a3f0bf6f0390a9ba0764135ec34e89 -->
-
-  <div class="file-navigation js-zeroclipboard-container">
-    
-<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
-  <button class=" btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
-    
-    type="button" aria-label="Switch branches or tags" aria-expanded="false" aria-haspopup="true">
-      <i>Branch:</i>
-      <span class="js-select-button css-truncate-target">master</span>
-  </button>
-
-  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
-
-    <div class="select-menu-modal">
-      <div class="select-menu-header">
-        <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
-        <span class="select-menu-title">Switch branches/tags</span>
-      </div>
-
-      <div class="select-menu-filters">
-        <div class="select-menu-text-filter">
-          <input type="text" aria-label="Find or create a branch…" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Find or create a branch…">
-        </div>
-        <div class="select-menu-tabs">
-          <ul>
-            <li class="select-menu-tab">
-              <a href="#" data-tab-filter="branches" data-filter-placeholder="Find or create a branch…" class="js-select-menu-tab" role="tab">Branches</a>
-            </li>
-            <li class="select-menu-tab">
-              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
-
-        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
-
-
-            <a class="select-menu-item js-navigation-item js-navigation-open selected"
-               href="/Kitty612/RepData_PeerAssessment1/blob/master/PA1_template.Rmd"
-               data-name="master"
-               data-skip-pjax="true"
-               rel="nofollow">
-              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
-              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
-                master
-              </span>
-            </a>
-        </div>
-
-          <!-- '"` --><!-- </textarea></xmp> &ndash;></option></form><form accept-charset="UTF-8" action="/Kitty612/RepData_PeerAssessment1/branches" class="js-create-branch select-menu-item select-menu-new-item-form js-navigation-item js-new-item-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="z1QRRPMTJ5vgfKP9On9qVujgNrb0CUtJErF/rfuDepdw5Z9GAOzAoqqywAgheLgURno0ZGa2mmcBMKIKE3M3mA==" /></div>
-          <svg aria-hidden="true" class="octicon octicon-git-branch select-menu-item-icon" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
-            <div class="select-menu-item-text">
-              <span class="select-menu-item-heading">Create branch: <span class="js-new-item-name"></span></span>
-              <span class="description">from ‘master’</span>
-            </div>
-            <input type="hidden" name="name" id="name" class="js-new-item-value">
-            <input type="hidden" name="branch" id="branch" value="master">
-            <input type="hidden" name="path" id="path" value="PA1_template.Rmd">
-</form>
-      </div>
-
-      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
-        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
-
-
-        </div>
-
-        <div class="select-menu-no-results">Nothing to show</div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<pre><code>&lt;div class=&quot;BtnGroup float-right&quot;&gt;
-  &lt;a href=&quot;/Kitty612/RepData_PeerAssessment1/find/master&quot;
-        class=&quot;js-pjax-capture-input btn btn-sm BtnGroup-item&quot;
-        data-pjax
-        data-hotkey=&quot;t&quot;&gt;
-    Find file
-  &lt;/a&gt;
-  &lt;button aria-label=&quot;Copy file path to clipboard&quot; class=&quot;js-zeroclipboard btn btn-sm BtnGroup-item tooltipped tooltipped-s&quot; data-copied-hint=&quot;Copied!&quot; type=&quot;button&quot;&gt;Copy path&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class=&quot;breadcrumb js-zeroclipboard-target&quot;&gt;
-  &lt;span class=&quot;repo-root js-repo-root&quot;&gt;&lt;span class=&quot;js-path-segment&quot;&gt;&lt;a href=&quot;/Kitty612/RepData_PeerAssessment1&quot;&gt;&lt;span&gt;RepData_PeerAssessment1&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;separator&quot;&gt;/&lt;/span&gt;&lt;strong class=&quot;final-path&quot;&gt;PA1_template.Rmd&lt;/strong&gt;
-&lt;/div&gt;
-</code></pre>
-
-<p></div></p>
-
-<p><div class="commit-tease">
-      <span class="float-right">
-        <a class="commit-tease-sha" href="/Kitty612/RepData_PeerAssessment1/commit/ba45ddbb76c72c7f0696b0364487aeca9809fc1b" data-pjax>
-          ba45ddb
-        </a>
-        <relative-time datetime="2017-08-18T22:11:54Z">Aug 18, 2017</relative-time>
-      </span>
-      <div>
-        <img alt="@Kitty612" class="avatar" height="20" src="https://avatars3.githubusercontent.com/u/8844283?v=4&amp;s=40" width="20" />
-        <a href="/Kitty612" class="user-mention" rel="author">Kitty612</a>
-          <a href="/Kitty612/RepData_PeerAssessment1/commit/ba45ddbb76c72c7f0696b0364487aeca9809fc1b" class="message" data-pjax="true" title="Updated Rmd and HTML files">Updated Rmd and HTML files</a>
-      </div></p>
-
-<pre><code>&lt;div class=&quot;commit-tease-contributors&quot;&gt;
-  &lt;button type=&quot;button&quot; class=&quot;btn-link muted-link contributors-toggle&quot; data-facebox=&quot;#blob_contributors_box&quot;&gt;
-    &lt;strong&gt;3&lt;/strong&gt;
-     contributors
-  &lt;/button&gt;
-      &lt;a class=&quot;avatar-link tooltipped tooltipped-s&quot; aria-label=&quot;Kitty612&quot; href=&quot;/Kitty612/RepData_PeerAssessment1/commits/master/PA1_template.Rmd?author=Kitty612&quot;&gt;&lt;img alt=&quot;@Kitty612&quot; class=&quot;avatar&quot; height=&quot;20&quot; src=&quot;https://avatars3.githubusercontent.com/u/8844283?v=4&amp;amp;s=40&quot; width=&quot;20&quot; /&gt; &lt;/a&gt;
-&lt;a class=&quot;avatar-link tooltipped tooltipped-s&quot; aria-label=&quot;Ripley6811&quot; href=&quot;/Kitty612/RepData_PeerAssessment1/commits/master/PA1_template.Rmd?author=Ripley6811&quot;&gt;&lt;img alt=&quot;@Ripley6811&quot; class=&quot;avatar&quot; height=&quot;20&quot; src=&quot;https://avatars2.githubusercontent.com/u/1886005?v=4&amp;amp;s=40&quot; width=&quot;20&quot; /&gt; &lt;/a&gt;
-&lt;a class=&quot;avatar-link tooltipped tooltipped-s&quot; aria-label=&quot;rdpeng&quot; href=&quot;/Kitty612/RepData_PeerAssessment1/commits/master/PA1_template.Rmd?author=rdpeng&quot;&gt;&lt;img alt=&quot;@rdpeng&quot; class=&quot;avatar&quot; height=&quot;20&quot; src=&quot;https://avatars2.githubusercontent.com/u/9612?v=4&amp;amp;s=40&quot; width=&quot;20&quot; /&gt; &lt;/a&gt;
-
-
-&lt;/div&gt;
-
-&lt;div id=&quot;blob_contributors_box&quot; style=&quot;display:none&quot;&gt;
-  &lt;h2 class=&quot;facebox-header&quot; data-facebox-id=&quot;facebox-header&quot;&gt;Users who have contributed to this file&lt;/h2&gt;
-  &lt;ul class=&quot;facebox-user-list&quot; data-facebox-id=&quot;facebox-description&quot;&gt;
-      &lt;li class=&quot;facebox-user-list-item&quot;&gt;
-        &lt;img alt=&quot;@Kitty612&quot; height=&quot;24&quot; src=&quot;https://avatars1.githubusercontent.com/u/8844283?v=4&amp;amp;s=48&quot; width=&quot;24&quot; /&gt;
-        &lt;a href=&quot;/Kitty612&quot;&gt;Kitty612&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class=&quot;facebox-user-list-item&quot;&gt;
-        &lt;img alt=&quot;@Ripley6811&quot; height=&quot;24&quot; src=&quot;https://avatars0.githubusercontent.com/u/1886005?v=4&amp;amp;s=48&quot; width=&quot;24&quot; /&gt;
-        &lt;a href=&quot;/Ripley6811&quot;&gt;Ripley6811&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class=&quot;facebox-user-list-item&quot;&gt;
-        &lt;img alt=&quot;@rdpeng&quot; height=&quot;24&quot; src=&quot;https://avatars0.githubusercontent.com/u/9612?v=4&amp;amp;s=48&quot; width=&quot;24&quot; /&gt;
-        &lt;a href=&quot;/rdpeng&quot;&gt;rdpeng&lt;/a&gt;
-      &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-</code></pre>
-
-<p></div></p>
-
-<p><div class="file">
-    <div class="file-header">
-  <div class="file-actions"></p>
-
-<pre><code>&lt;div class=&quot;BtnGroup&quot;&gt;
-  &lt;a href=&quot;/Kitty612/RepData_PeerAssessment1/raw/master/PA1_template.Rmd&quot; class=&quot;btn btn-sm BtnGroup-item&quot; id=&quot;raw-url&quot;&gt;Raw&lt;/a&gt;
-    &lt;a href=&quot;/Kitty612/RepData_PeerAssessment1/blame/master/PA1_template.Rmd&quot; class=&quot;btn btn-sm js-update-url-with-hash BtnGroup-item&quot; data-hotkey=&quot;b&quot;&gt;Blame&lt;/a&gt;
-  &lt;a href=&quot;/Kitty612/RepData_PeerAssessment1/commits/master/PA1_template.Rmd&quot; class=&quot;btn btn-sm BtnGroup-item&quot; rel=&quot;nofollow&quot;&gt;History&lt;/a&gt;
-&lt;/div&gt;
-
-    &lt;a class=&quot;btn-octicon tooltipped tooltipped-nw&quot;
-       href=&quot;https://desktop.github.com&quot;
-       aria-label=&quot;Open this file in GitHub Desktop&quot;
-       data-ga-click=&quot;Repository, open with desktop, type:mac&quot;&gt;
-        &lt;svg aria-hidden=&quot;true&quot; class=&quot;octicon octicon-device-desktop&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z&quot;/&gt;&lt;/svg&gt;
-    &lt;/a&gt;
-
-    &lt;!-- &#39;&quot;` --&gt;&lt;!-- &lt;/textarea&gt;&lt;/xmp&gt; --&gt;&lt;/option&gt;&lt;/form&gt;&lt;form accept-charset=&quot;UTF-8&quot; action=&quot;/Kitty612/RepData_PeerAssessment1/edit/master/PA1_template.Rmd&quot; class=&quot;inline-form js-update-url-with-hash&quot; method=&quot;post&quot;&gt;&lt;div style=&quot;margin:0;padding:0;display:inline&quot;&gt;&lt;input name=&quot;utf8&quot; type=&quot;hidden&quot; value=&quot;&amp;#x2713;&quot; /&gt;&lt;input name=&quot;authenticity_token&quot; type=&quot;hidden&quot; value=&quot;Zam3od24ZoWg+ttD8sOxGjIvSAo7gvDlmFE2vKFNxORceIVZi9b4MDGktnzInXPB+vfx5TnguF+GJYFVekikyg==&quot; /&gt;&lt;/div&gt;
-      &lt;button class=&quot;btn-octicon tooltipped tooltipped-nw&quot; type=&quot;submit&quot;
-        aria-label=&quot;Edit this file&quot; data-hotkey=&quot;e&quot; data-disable-with&gt;
-        &lt;svg aria-hidden=&quot;true&quot; class=&quot;octicon octicon-pencil&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;14&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z&quot;/&gt;&lt;/svg&gt;
-      &lt;/button&gt;
-</code></pre>
-
-<p></form>        &lt;!&ndash; &#39;&ldquo; &ndash;&gt;&lt;!&ndash; </textarea></xmp> &ndash;&gt;</option></form><form accept-charset="UTF-8" action="/Kitty612/RepData_PeerAssessment1/delete/master/PA1_template.Rmd" class="inline-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="L5b/qiTim7q9oriNOlBmrfL42rElfNB6c+p8xoJ5frMaVSO+pUA9zdSNpahIdlLcpWRPG8g3wHpXR2XFRklm9A==" /></div>
-          <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
-            aria-label="Delete this file" data-disable-with>
-            <svg aria-hidden="true" class="octicon octicon-trashcan" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
-          </button>
-</form>  </div></p>
-
-<p><div class="file-info">
-      103 lines (73 sloc)
-      <span class="file-info-divider"></span>
-    3.13 KB
-  </div>
-</div></p>
-
-<p><div id="readme" class="readme blob instapaper_body">
-    <article class="markdown-body entry-content" itemprop="text"><table data-table-type="yaml-metadata">
-  <thead>
-  <tr>
-  <th>title</th></p>
-
-<p><th>output</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-  <td><div>Course Project 1</div></td></p>
-
-<p><td><div>html_document</div></td>
-  </tr>
-  </tbody>
-</table></p>
-
-<pre lang="{r"><code>knitr::opts_chunk$set(echo = TRUE)
-</code></pre>
-
-<h2><a id="user-content-loading-and-preprocessing-the-data" class="anchor" href="#loading-and-preprocessing-the-data" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loading and preprocessing the data</h2>
-
-<pre lang="{r,"><code>data &lt;- read.csv("activity.csv")
-head(data)
-</code></pre>
-
-<h2><a id="user-content-what-is-mean-total-number-of-steps-taken-per-day" class="anchor" href="#what-is-mean-total-number-of-steps-taken-per-day" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is mean total number of steps taken per day?</h2>
+<h2>What is mean total number of steps taken per day?</h2>
 
 <ol>
 <li>Calculate the total number of steps taken per day.</li>
 </ol>
 
-<pre lang="{r,"><code>total &lt;- aggregate(data$steps, by=list(date=data$date),sum)
+<pre><code class="r">total &lt;- aggregate(data$steps, by=list(date=data$date),sum)
 sum(total$x,na.rm=1)/nrow(total)
 </code></pre>
 
-<ol start="2">
+<pre><code>## [1] 9354.23
+</code></pre>
+
+<ol>
 <li>Make a histogram of the total number of steps taken each day.</li>
 </ol>
 
-<pre lang="{r,"><code>hist(total$x,main = "Total number of steps each day", xlab = "Steps", ylab = 'Count')
+<pre><code class="r">hist(total$x,main = &quot;Total number of steps each day&quot;, xlab = &quot;Steps&quot;, ylab = &#39;Count&#39;)
 </code></pre>
 
-<ol start="3">
-<li>Calculate and report the mean and median of the total number of steps taken per day.</li>
-</ol>
+<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-3"/>
+3. Calculate and report the mean and median of the total number of steps taken per day.</p>
 
-<pre lang="{r,"><code>summary(total)
+<pre><code class="r">summary(total)
+</code></pre>
+
+<pre><code>##          date          x        
+##  2012-10-01: 1   Min.   :   41  
+##  2012-10-02: 1   1st Qu.: 8841  
+##  2012-10-03: 1   Median :10765  
+##  2012-10-04: 1   Mean   :10766  
+##  2012-10-05: 1   3rd Qu.:13294  
+##  2012-10-06: 1   Max.   :21194  
+##  (Other)   :55   NA&#39;s   :8
 </code></pre>
 
 <p>The mean of total number of steps taken per day is 10766. The median is 10765.</p>
 
-<h2><a id="user-content-what-is-the-average-daily-activity-pattern" class="anchor" href="#what-is-the-average-daily-activity-pattern" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is the average daily activity pattern?</h2>
+<h2>What is the average daily activity pattern?</h2>
 
-<pre lang="{r,"><code>library(ggplot2)
+<pre><code class="r">library(ggplot2)
 data2 &lt;- aggregate(data$steps, list(data$interval), mean, na.rm=1)
-ggplot(data2, aes(Group.1, x)) + geom_line() + xlab("5-minute interval") + ylab("average number of steps")
+ggplot(data2, aes(Group.1, x)) + geom_line() + xlab(&quot;5-minute interval&quot;) + ylab(&quot;average number of steps&quot;)
 </code></pre>
 
-<pre lang="{r,"><code>data2[data2$x==max(data2$x),]
+<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-5"/></p>
+
+<pre><code class="r">data2[data2$x==max(data2$x),]
+</code></pre>
+
+<pre><code>##     Group.1        x
+## 104     835 206.1698
 </code></pre>
 
 <p>The 835 interval, on average across all the days in the dataset, contains the maximum number of steps.</p>
 
-<h2><a id="user-content-inputing-missing-values" class="anchor" href="#inputing-missing-values" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Inputing missing values</h2>
+<h2>Inputing missing values</h2>
 
-<pre lang="{r,"><code>sum(is.na(data$steps))
+<pre><code class="r">sum(is.na(data$steps))
+</code></pre>
+
+<pre><code>## [1] 2304
 </code></pre>
 
 <p>There are 2304 missing values in the dataset.</p>
 
 <p>To fill in the missing data, we can use the mean for that 5-minute interval.</p>
 
-<pre lang="{r,"><code>newData &lt;- data
+<pre><code class="r">newData &lt;- data
 for (i in 1:nrow(newData)) {
         if (is.na(newData$steps[i])) {
 newData$steps[i] &lt;- data2[which(newData$interval[i] == data2$Group.1), ]$x
@@ -908,111 +301,45 @@ newData$steps[i] &lt;- data2[which(newData$interval[i] == data2$Group.1), ]$x
 }
 </code></pre>
 
-<pre lang="{r,"><code>newTotal &lt;- aggregate(newData$steps, by=list(newData$date), sum)
-hist(newTotal$x, main = "Total number of steps each day", xlab = "Steps", ylab = 'Count')
+<pre><code class="r">newTotal &lt;- aggregate(newData$steps, by=list(newData$date), sum)
+hist(newTotal$x, main = &quot;Total number of steps each day&quot;, xlab = &quot;Steps&quot;, ylab = &#39;Count&#39;)
 </code></pre>
 
-<pre lang="{r,"><code>summary(newTotal)
+<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-9"/></p>
+
+<pre><code class="r">summary(newTotal)
+</code></pre>
+
+<pre><code>##        Group.1         x        
+##  2012-10-01: 1   Min.   :   41  
+##  2012-10-02: 1   1st Qu.: 9819  
+##  2012-10-03: 1   Median :10766  
+##  2012-10-04: 1   Mean   :10766  
+##  2012-10-05: 1   3rd Qu.:12811  
+##  2012-10-06: 1   Max.   :21194  
+##  (Other)   :55
 </code></pre>
 
 <p>The mean of total number of steps taken per day is 10766. The median is 10766.
 The median is a little different from the first part of the assignment. Imptuting missing data on the estimates of the total daily number of steps will make the total daily number of steps larger.</p>
 
-<h2><a id="user-content-are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="anchor" href="#are-there-differences-in-activity-patterns-between-weekdays-and-weekends" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Are there differences in activity patterns between weekdays and weekends?</h2>
+<h2>Are there differences in activity patterns between weekdays and weekends?</h2>
 
-<p>Create a new factor variable in the dataset with two levels - &quot;weekday&rdquo; and &ldquo;weekend&rdquo; indicating whether a given date is a weekday or weekend day.</p>
+<p>Create a new factor variable in the dataset with two levels - &ldquo;weekday&rdquo; and &ldquo;weekend&rdquo; indicating whether a given date is a weekday or weekend day.</p>
 
-<pre lang="{r,"><code>newData$date &lt;- as.Date(newData$date)
+<pre><code class="r">newData$date &lt;- as.Date(newData$date)
 newData$weekday &lt;- weekdays(newData$date)
-newData$date.type &lt;- ifelse(newData$weekday == "Saturday"|newData$weekday == "Sunday", "Weekend", "Weekday")
+newData$date.type &lt;- ifelse(newData$weekday == &quot;Saturday&quot;|newData$weekday == &quot;Sunday&quot;, &quot;Weekend&quot;, &quot;Weekday&quot;)
 newData$date.type &lt;- factor(newData$date.type)
 </code></pre>
 
 <p>Make a panel plot containing a time series plot (i.e. type = &ldquo;l&rdquo;) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).</p>
 
-<pre lang="{r,"><code>panelData &lt;- aggregate(newData$steps, by=list(interval=newData$interval, weekdayType=newData$date.type), sum)
-ggplot(panelData, aes(interval,x)) + geom_line() + facet_grid(weekdayType~.)+xlab("5-minute interval") + ylab("average number of steps")
+<pre><code class="r">panelData &lt;- aggregate(newData$steps, by=list(interval=newData$interval, weekdayType=newData$date.type), sum)
+ggplot(panelData, aes(interval,x)) + geom_line() + facet_grid(weekdayType~.)+xlab(&quot;5-minute interval&quot;) + ylab(&quot;average number of steps&quot;)
 </code></pre>
 
-<p></article>
-  </div></p>
-
-<p></div></p>
-
-<p><button type="button" data-facebox="#jump-to-line" data-facebox-class="linejump" data-hotkey="l" class="d-none">Jump to Line</button>
-  <div id="jump-to-line" style="display:none">
-    &lt;!&ndash; &#39;&ldquo; &ndash;&gt;&lt;!&ndash; </textarea></xmp> &ndash;&gt;</option></form><form accept-charset="UTF-8" action="" class="js-jump-to-line-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
-      <input class="form-control linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
-      <button type="submit" class="btn">Go</button>
-</form>  </div></p>
-
-<p></div>
-  <div class="modal-backdrop js-touch-events"></div>
-</div></p>
-
-<pre><code>&lt;/div&gt;
-</code></pre>
-
-<p></div></p>
-
-<p></div></p>
-
-<div class="footer container-lg px-3" role="contentinfo">
-  <div class="position-relative d-flex flex-justify-between py-6 mt-6 f6 text-gray border-top border-gray-light ">
-    <ul class="list-style-none d-flex flex-wrap ">
-      <li class="mr-3">&copy; 2017 <span title="0.12749s from unicorn-570196122-0g16d">GitHub</span>, Inc.</li>
-        <li class="mr-3"><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
-        <li class="mr-3"><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
-        <li class="mr-3"><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
-        <li class="mr-3"><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
-        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
-    </ul>
-
-    <a href="https://github.com" aria-label="Homepage" class="footer-octicon" title="GitHub">
-      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-</a>
-    <ul class="list-style-none d-flex flex-wrap ">
-        <li class="mr-3"><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact GitHub</a></li>
-      <li class="mr-3"><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
-      <li class="mr-3"><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
-      <li class="mr-3"><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
-        <li class="mr-3"><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
-        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
-
-    </ul>
-  </div>
-</div>
-
-<p><div id="ajax-error-message" class="ajax-error-message flash flash-error">
-    <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
-    <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
-      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
-    </button>
-    You can&#39;t perform that action at this time.
-  </div></p>
-
-<pre><code>&lt;script crossorigin=&quot;anonymous&quot; integrity=&quot;sha256-CDJgz5igmxVYa+cL5uSEJrHNCNvKIn1MgYqR+prYSRE=&quot; src=&quot;https://assets-cdn.github.com/assets/frameworks-083260cf98a09b15586be70be6e48426b1cd08dbca227d4c818a91fa9ad84911.js&quot;&gt;&lt;/script&gt;
-
-&lt;script async=&quot;async&quot; crossorigin=&quot;anonymous&quot; integrity=&quot;sha256-u+ptCe/ipX29duzN0rBQW++1xUV1lPLkKptTRlo8woI=&quot; src=&quot;https://assets-cdn.github.com/assets/github-bbea6d09efe2a57dbd76eccdd2b0505befb5c5457594f2e42a9b53465a3cc282.js&quot;&gt;&lt;/script&gt;
-</code></pre>
-
-<p><div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
-    <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
-    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
-    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
-  </div>
-  <div class="facebox" id="facebox" style="display:none;">
-  <div class="facebox-popup">
-    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
-    </div>
-    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
-      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
-    </button>
-  </div>
-</div></p>
-
-<p></body>
-</html></p>
+<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-12"/></p>
 
 </body>
 
